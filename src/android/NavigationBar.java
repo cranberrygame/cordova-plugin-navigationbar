@@ -1,11 +1,7 @@
-// Copyright (c) 2014 cranberrygame
-// Email: cranberrygame@yahoo.com
-// Phonegap plugin: http://www.github.com/cranberrygame
-// Construct2 phonegap plugin: https://www.scirra.com/forum/viewtopic.php?f=153&t=109586
-//                             https://dl.dropboxusercontent.com/u/186681453/index.html
-//                             https://www.scirra.com/users/cranberrygame
-// Facebook: https://www.facebook.com/profile.php?id=100006204729846
-// License: MIT (http://opensource.org/licenses/MIT)
+//Copyright (c) 2014 Sang Ki Kwon (Cranberrygame)
+//Email: cranberrygame@yahoo.com
+//Homepage: http://www.github.com/cranberrygame
+//License: MIT (http://opensource.org/licenses/MIT)
 package com.cranberrygame.phonegap.plugin;
 
 import org.apache.cordova.CordovaPlugin;
@@ -48,21 +44,23 @@ public class NavigationBar extends CordovaPlugin {
 		//JSONObject inJson = json.optJSONObject("inJson");
 			
 		if (action.equals("setUp")) {
-			//Activity activity=cordova.getActivity();
+			//Activity activity = cordova.getActivity();
 			//webView
 			//
 			final boolean autoHide = args.getBoolean(0);
 			
-			final CallbackContext delayedCB = callbackContext;
+			final CallbackContext delayedCC = callbackContext;
 			cordova.getActivity().runOnUiThread(new Runnable(){
 				@Override
 				public void run() {						
 					_setUp(autoHide);
 					
-					delayedCB.sendPluginResult(new PluginResult(PluginResult.Status.OK));
-					//delayedCB.success();
-					//delayedCB.sendPluginResult(new PluginResult(PluginResult.Status.ERROR));
-					//delayedCB.error();
+					PluginResult pr = new PluginResult(PluginResult.Status.OK);
+					//pr.setKeepCallback(true);
+					delayedCC.sendPluginResult(pr);
+					//PluginResult pr = new PluginResult(PluginResult.Status.ERROR);
+					//pr.setKeepCallback(true);
+					//delayedCC.sendPluginResult(pr);					
 				}
 			});	
 			
@@ -73,16 +71,18 @@ public class NavigationBar extends CordovaPlugin {
 			//webView
 			//
 			
-			final CallbackContext delayedCB = callbackContext;
+			final CallbackContext delayedCC = callbackContext;
 			cordova.getActivity().runOnUiThread(new Runnable(){
 				@Override
 				public void run() {						
 					_hide();
 					
-					delayedCB.sendPluginResult(new PluginResult(PluginResult.Status.OK));
-					//delayedCB.success();
-					//delayedCB.sendPluginResult(new PluginResult(PluginResult.Status.ERROR));
-					//delayedCB.error();
+					PluginResult pr = new PluginResult(PluginResult.Status.OK);
+					//pr.setKeepCallback(true);
+					delayedCC.sendPluginResult(pr);
+					//PluginResult pr = new PluginResult(PluginResult.Status.ERROR);
+					//pr.setKeepCallback(true);
+					//delayedCC.sendPluginResult(pr);					
 				}
 			});	
 			

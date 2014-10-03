@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <script type="text/javascript" src="cordova.js"></script>
+	</head>
+    <body>
+
+<script>
+document.addEventListener("deviceready", function(){
+	var autoHide = false;
+	window.navigationbar.setUp(autoHide);		
+}, false);	
+</script>
+
+<p><button onclick="window.navigationbar.hide();">hide</button></p>
+
+    </body>
+</html>
