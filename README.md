@@ -9,7 +9,7 @@ How to Install:
 cordova plugin add http://github.com/cranberrygame/com.cranberrygame.phonegap.plugin.navigationbar
 </pre>
 
-How to install (Crosswalk for android):
+How to install (crosswalk):
 
 <pre>
 XDK PORJECTS - your_xdk_project - CORDOVA 3.X HYBRID MOBILE APP SETTINGS - PLUGINS AND PERMISSIONS - Third Party Plugins - Add a Third Party Plugin - Get Plugin from the Web -

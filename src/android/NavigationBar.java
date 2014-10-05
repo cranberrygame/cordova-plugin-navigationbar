@@ -96,11 +96,17 @@ public class NavigationBar extends CordovaPlugin {
 	@TargetApi(Build.VERSION_CODES.HONEYCOMB) 
 	private void _setUp(boolean autoHide){
 		if (autoHide) {
-			//http://www.youtube.com/watch?v=O53rxBjZbJ8
-			//http://www.youtube.com/watch?v=Xw9TIS_JsPM		
-			//http://bin-liu.blogspot.kr/2012/03/how-to-hide-and-display-navigation-bar.html
 			Activity activity=cordova.getActivity();
-			activity.getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN);				
+			//http://stackoverflow.com/questions/21164836/immersive-mode-navigation-becomes-sticky-after-volume-press-or-minimise-restore
+			//http://www.youtube.com/watch?v=Xw9TIS_JsPM		
+			//https://developer.android.com/training/system-ui/status.html
+			activity.getWindow().getDecorView().setSystemUiVisibility(
+				View.SYSTEM_UI_FLAG_HIDE_NAVIGATION//
+				| View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+				//| View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+				//| View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+				//| View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+			);							
 		
 			final CordovaInterface cordova_final = cordova;
 			//http://stackoverflow.com/questions/11762306/listen-for-first-touchevent-when-using-system-ui-flag-hide-navigation
@@ -117,7 +123,13 @@ public class NavigationBar extends CordovaPlugin {
 							@Override
 							public void run() {
 								Activity activity=cordova_final.getActivity();
-								activity.getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN);				
+								activity.getWindow().getDecorView().setSystemUiVisibility(
+									View.SYSTEM_UI_FLAG_HIDE_NAVIGATION//
+									| View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+									//| View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+									//| View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+									//| View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+								);							
 							}
 						}, 3000);//after ms		    		
 					}
@@ -129,6 +141,12 @@ public class NavigationBar extends CordovaPlugin {
 	@TargetApi(Build.VERSION_CODES.HONEYCOMB) 
 	private void _hide(){
 		Activity activity=cordova.getActivity();
-		activity.getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN);				
+		activity.getWindow().getDecorView().setSystemUiVisibility(
+			View.SYSTEM_UI_FLAG_HIDE_NAVIGATION//
+			| View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+			//| View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+			//| View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+			//| View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+		);	
 	}
 }
