@@ -2,14 +2,19 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="com.cranberrygame.phonegap.plugin.navigationbar"
-    version="1.0.5">
+    version="1.0.7">
 	
-    <name>NavigationBar</name>
-    <description>NavigationBar</description>
+    <name>Phonegap NavigationBar plugin</name>
+    <description>hide and auto hide navigation bar.</description>
+    <author>Sang Ki Kwon (Cranberrygame)</author>	
     <license>MIT</license>
-    <keywords>phonegap, navigationbar</keywords>
+    <keywords>phonegap, plugin, navigationbar</keywords>
     <repo>https://github.com/cranberrygame/com.cranberrygame.phonegap.plugin.navigationbar</repo>
- 	
+    <issue>https://github.com/floatinghotpot/com.cranberrygame.phonegap.plugin.navigationbar/issues</issue>
+ 	<engines>
+	    <engine name="cordova" version=">=3.0.0" />
+	</engines>
+	
     <js-module src="www/navigationbar.js">
         <clobbers target="window.navigationbar" />
     </js-module>

@@ -88,7 +88,7 @@ public class NavigationBar extends CordovaPlugin {
 			
 			return true;
 		}
-		
+				
 		return false; // Returning false results in a "MethodNotFound" error.
 	}
 	//-------------------------------------
@@ -105,7 +105,7 @@ public class NavigationBar extends CordovaPlugin {
 				| View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
 				//| View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
 				//| View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-				//| View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+				| View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
 			);							
 		
 			final CordovaInterface cordova_final = cordova;
@@ -116,7 +116,6 @@ public class NavigationBar extends CordovaPlugin {
 				@Override
 				public void onSystemUiVisibilityChange(int vis) {
 					if(vis == 0){
-						
 						//http://stackoverflow.com/questions/3072173/how-to-call-a-method-after-a-delay-in-android
 						Handler handler = new Handler();
 						handler.postDelayed(new Runnable() {
@@ -128,7 +127,7 @@ public class NavigationBar extends CordovaPlugin {
 									| View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
 									//| View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
 									//| View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-									//| View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+									| View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
 								);							
 							}
 						}, 3000);//after ms		    		
@@ -146,7 +145,7 @@ public class NavigationBar extends CordovaPlugin {
 			| View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
 			//| View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
 			//| View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-			//| View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+			| View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
 		);	
 	}
 }
