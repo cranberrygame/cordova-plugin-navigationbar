@@ -1,14 +1,7 @@
 # Overview #
-show leadbolt app ad (alert, banner, offer wall and full screen) and audio (sdk)
+hide and auto hide navigation bar.
 
-[android, ios] [phonegap cli] [crosswalk]
-
-requires leadbolt developer account http://www.leadbolt.com
-
-alert (app ad) demo: http://www.youtube.com/watch?v=Jfmi-SK6OaQ<br>
-offer wall (app ad) demo: http://www.youtube.com/watch?v=4fzCFgo4XaI<br>
-interstitial (app ad) demo: http://www.youtube.com/watch?v=385El4b9Ux4<br>
-audio ad demo: http://www.youtube.com/watch?v=YOntmP0OYCk
+[android] [phonegap cli] [crosswalk]
 # Install phonegap plugin #
 
 ## Phonegap build service (config.xml) ##
