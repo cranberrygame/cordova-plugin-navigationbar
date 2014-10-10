@@ -40,4 +40,4 @@ Phonegap related c2 plugins (+Crosswalk)<br>
 https://www.scirra.com/forum/viewtopic.php?t=109586
 
 Games/Apps with phonegap related c2 plugins (+Crosswalk)<br>
-https://www.scirra.com/forum/viewtopic.php?f=148&t=115517
+https://www.scirra.com/forum/viewtopic.php?t=115517
