@@ -33,11 +33,11 @@ document.addEventListener("deviceready", function(){
 # Test #
 
 # Useful links #
-Construct 2: a games/apps maker<br>
-https://www.scirra.com/
-
 Phonegap related c2 plugins (+Crosswalk)<br>
 https://www.scirra.com/forum/viewtopic.php?t=109586
 
-Games/Apps with phonegap related c2 plugins (+Crosswalk)<br>
+Games/Apps made with phonegap related c2 plugins (+Crosswalk)<br>
 https://www.scirra.com/forum/viewtopic.php?t=115517
+
+Construct 2: an easy html5 games/apps maker<br>
+https://www.scirra.com/
