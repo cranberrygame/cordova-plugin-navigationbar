@@ -8,6 +8,7 @@ import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.PluginResult;
 import org.apache.cordova.CallbackContext;
 import org.json.JSONArray;
+import org.json.JSONObject;
 import org.json.JSONException;
 import org.apache.cordova.CordovaInterface;
 import org.apache.cordova.CordovaWebView;
@@ -47,13 +48,13 @@ public class NavigationBar extends CordovaPlugin {
 			//Activity activity = cordova.getActivity();
 			//webView
 			//
-			final boolean autoHide = args.getBoolean(0);
+			final boolean autoHideNavigationBar = args.getBoolean(0);
 			
 			final CallbackContext delayedCC = callbackContext;
 			cordova.getActivity().runOnUiThread(new Runnable(){
 				@Override
 				public void run() {						
-					_setUp(autoHide);
+					_setUp(autoHideNavigationBar);
 					
 					PluginResult pr = new PluginResult(PluginResult.Status.OK);
 					//pr.setKeepCallback(true);
@@ -66,7 +67,7 @@ public class NavigationBar extends CordovaPlugin {
 			
 			return true;
 		}
-		else if (action.equals("hide")) {
+		else if (action.equals("hideNavigationBar")) {
 			//Activity activity=cordova.getActivity();
 			//webView
 			//
@@ -75,7 +76,7 @@ public class NavigationBar extends CordovaPlugin {
 			cordova.getActivity().runOnUiThread(new Runnable(){
 				@Override
 				public void run() {						
-					_hide();
+					_hideNavigationBar();
 					
 					PluginResult pr = new PluginResult(PluginResult.Status.OK);
 					//pr.setKeepCallback(true);
@@ -94,8 +95,8 @@ public class NavigationBar extends CordovaPlugin {
 	//-------------------------------------
 
 	@TargetApi(Build.VERSION_CODES.HONEYCOMB) 
-	private void _setUp(boolean autoHide){
-		if (autoHide) {
+	private void _setUp(boolean autoHideNavigationBar){
+		if (autoHideNavigationBar) {
 			Activity activity=cordova.getActivity();
 			//http://stackoverflow.com/questions/21164836/immersive-mode-navigation-becomes-sticky-after-volume-press-or-minimise-restore
 			//http://www.youtube.com/watch?v=Xw9TIS_JsPM		
@@ -138,7 +139,7 @@ public class NavigationBar extends CordovaPlugin {
 	}
 
 	@TargetApi(Build.VERSION_CODES.HONEYCOMB) 
-	private void _hide(){
+	private void _hideNavigationBar(){
 		Activity activity=cordova.getActivity();
 		activity.getWindow().getDecorView().setSystemUiVisibility(
 			View.SYSTEM_UI_FLAG_HIDE_NAVIGATION//

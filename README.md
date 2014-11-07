@@ -1,5 +1,5 @@
 # Overview #
-hide and auto hide navigation bar.
+auto hide and hide navigation bar.
 
 [android] [phonegap cli] [crosswalk]
 # Install phonegap plugin #
@@ -23,12 +23,12 @@ Repo URL: https://github.com/cranberrygame/com.cranberrygame.phonegap.plugin.nav
 # API #
 ```javascript
 document.addEventListener("deviceready", function(){
-	var autoHide = true;
-	window.navigationbar.setUp(autoHide);		
+	var autoHideNavigationBar = true;
+	window.navigationbar.setUp(autoHideNavigationBar);		
 }, false);	
 ```
 # Examples #
-<a href="https://github.com/cranberrygame/com.cranberrygame.phonegap.plugin.navigationbar/blob/master/example/basic/index.html">example/basic/index.html</a><br>
+<a href="https://github.com/cranberrygame/com.cranberrygame.phonegap.plugin.navigationbar/blob/master/example/index.html">example/index.html</a><br>
 <a href="https://github.com/cranberrygame/com.cranberrygame.phonegap.plugin.navigationbar/blob/master/example/advanced/index.html">example/advanced/index.html</a>
 # Test #
 

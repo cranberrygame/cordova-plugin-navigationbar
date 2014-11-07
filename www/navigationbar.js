@@ -1,20 +1,20 @@
 module.exports = {
    
-    setUp: function(autoHide, successCallback, errorCallback) {
+    setUp: function(autoHideNavigationBar, successCallback, errorCallback) {
         cordova.exec(
             successCallback,
             errorCallback,
             'NavigationBar',
             'setUp',
-            [autoHide]
+            [autoHideNavigationBar]
         ); 
     },
-    hide: function(successCallback, errorCallback) {
+    hideNavigationBar: function(successCallback, errorCallback) {
         cordova.exec(
             successCallback,
             errorCallback,
             'NavigationBar',
-            'hide',
+            'hideNavigationBar',
             []
         ); 
     }
