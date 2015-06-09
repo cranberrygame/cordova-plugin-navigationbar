@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    id="com.cranberrygame.phonegap.plugin.navigationbar"
+    id="com.cranberrygame.cordova.plugin.navigationbar"
     version="1.0.8">
 	
-    <name>Phonegap NavigationBar plugin</name>
+    <name>Cordova NavigationBar plugin</name>
     <description>auto hide and hide navigation bar.</description>
     <author>Sang Ki Kwon (Cranberrygame)</author>	
     <license>MIT</license>
-    <keywords>phonegap, plugin, navigationbar</keywords>
-    <repo>https://github.com/cranberrygame/com.cranberrygame.phonegap.plugin.navigationbar</repo>
-    <issue>https://github.com/cranberrygame/com.cranberrygame.phonegap.plugin.navigationbar/issues</issue>
+    <keywords>cordova, plugin, navigationbar</keywords>
+    <repo>https://github.com/cranberrygame/com.cranberrygame.cordova.plugin.navigationbar</repo>
+    <issue>https://github.com/cranberrygame/com.cranberrygame.cordova.plugin.navigationbar/issues</issue>
  	<engines>
 	    <engine name="cordova" version=">=3.0.0" />
 	</engines>
@@ -23,10 +23,10 @@
     <platform name="android">
 	    <config-file target="res/xml/config.xml" parent="/*">
             <feature name="NavigationBar" >
-                <param name="android-package" value="com.cranberrygame.phonegap.plugin.NavigationBar"/>
+                <param name="android-package" value="com.cranberrygame.cordova.plugin.navigationbar.NavigationBar"/>
             </feature>
         </config-file>
 		
-        <source-file src="src/android/NavigationBar.java" target-dir="src/com/cranberrygame/phonegap/plugin" />
+        <source-file src="src/android/NavigationBar.java" target-dir="src/com/cranberrygame/cordova/plugin/navigationbar" />
     </platform>
 </plugin>
