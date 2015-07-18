@@ -19,6 +19,8 @@ import android.util.Log;
 //
 import android.view.View;
 import android.os.Handler;
+//
+import java.lang.reflect.Method;
 
 public class NavigationBar extends CordovaPlugin {
 	private static final String LOG_TAG = "NavigationBar";
@@ -113,7 +115,8 @@ public class NavigationBar extends CordovaPlugin {
 			//http://stackoverflow.com/questions/11762306/listen-for-first-touchevent-when-using-system-ui-flag-hide-navigation
 			//http://stackoverflow.com/questions/15103339/android-full-screen-modeics-first-touch-shows-the-navigation-bar
 			//http://developer.android.com/reference/android/view/View.OnSystemUiVisibilityChangeListener.html	
-			webView.setOnSystemUiVisibilityChangeListener(new View.OnSystemUiVisibilityChangeListener(){
+			//webView.setOnSystemUiVisibilityChangeListener(new View.OnSystemUiVisibilityChangeListener(){//cordova5 build error
+			getView(webView).setOnSystemUiVisibilityChangeListener(new View.OnSystemUiVisibilityChangeListener(){//fixed cordova5 build error
 				@Override
 				public void onSystemUiVisibilityChange(int vis) {
 					if(vis == 0){
@@ -138,6 +141,24 @@ public class NavigationBar extends CordovaPlugin {
 		}
 	}
 
+	public static View getView(CordovaWebView webView) {	
+		if(View.class.isAssignableFrom(CordovaWebView.class)) {
+			return (View) webView;
+		}
+		
+		try {
+			Method getViewMethod = CordovaWebView.class.getMethod("getView", (Class<?>[]) null);
+			if(getViewMethod != null) {
+				Object[] args = {};
+				return (View) getViewMethod.invoke(webView, args);
+			}
+		} 
+		catch (Exception e) {
+		}
+		
+		return null;
+	}
+	
 	@TargetApi(Build.VERSION_CODES.HONEYCOMB) 
 	private void _hideNavigationBar(){
 		Activity activity=cordova.getActivity();

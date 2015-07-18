@@ -6,10 +6,12 @@
 
 <script>
 document.addEventListener("deviceready", function(){
-	var autoHideNavigationBar = true;
+	var autoHideNavigationBar = false;
 	window.navigationbar.setUp(autoHideNavigationBar);		
 }, false);	
 </script>
+
+<p><button onclick="window.navigationbar.hide();">hide</button></p>
 
     </body>
 </html>

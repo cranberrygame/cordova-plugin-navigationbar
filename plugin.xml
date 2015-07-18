@@ -2,10 +2,10 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="cordova-plugin-navigationbar"
-    version="1.0.28">
+    version="1.0.30">
 	
     <name>Cordova NavigationBar plugin</name>
-    <description>auto hide and hide navigation bar.</description>
+    <description>hide and auto hide navigation bar.</description>
     <author>Sang Ki Kwon (Cranberrygame)</author>	
     <license>MIT</license>
     <keywords>cordova, plugin, navigationbar</keywords>
