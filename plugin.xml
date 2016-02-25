@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="cordova-plugin-navigationbar"
-    version="1.0.30">
+    version="1.0.31">
 	
     <name>Cordova NavigationBar plugin</name>
     <description>hide and auto hide navigation bar.</description>
@@ -15,7 +15,7 @@
 	    <engine name="cordova" version=">=3.0.0" />
 	</engines>
 	
-    <js-module src="www/navigationbar.js">
+    <js-module src="www/navigationbar.js" name="navigationbar">
         <clobbers target="window.navigationbar" />
     </js-module>
 	

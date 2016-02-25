@@ -4,11 +4,11 @@ Cordova NavigationBar plugin
 # Overview #
 Hide and auto hide navigation bar.
 
-[android] [cordova cli] [xdk] [cocoon]
+[android] [cordova cli] [xdk] [cocoon] [phonegap build service]
 
 This is open source cordova plugin.
 
-You can see Plugins For Cordova in one page: http://cranberrygame.github.io?referrer=github
+You can see Cordova Plugins in one page: http://cranberrygame.github.io?referrer=github
 
 # Change log #
 ```c	
@@ -16,19 +16,17 @@ You can see Plugins For Cordova in one page: http://cranberrygame.github.io?refe
 # Install plugin #
 
 ## Cordova cli ##
-https://cordova.apache.org/docs/en/edge/guide_cli_index.md.html#The%20Command-Line%20Interface - npm install -g cordova@5.0.0
+https://cordova.apache.org/docs/en/edge/guide_cli_index.md.html#The%20Command-Line%20Interface - npm install -g cordova@6.0.0
 ```c
 cordova plugin add cordova-plugin-navigationbar
 (when build error, use github url: cordova plugin add https://github.com/cranberrygame/cordova-plugin-navigationbar)
 ```
 
 ## Xdk ##
-https://software.intel.com/en-us/intel-xdk - Download XDK - XDK PORJECTS - [specific project] - CORDOVA 3.X HYBRID MOBILE APP SETTINGS - PLUGINS - Third Party Plugins - Add a Third Party Plugin - Get Plugin from the Web -
+https://software.intel.com/en-us/intel-xdk - Download XDK - XDK PORJECTS - [specific project] - CORDOVA HYBRID MOBILE APP SETTINGS - Plugin Management - Add Plugins to this Project - Third Party Plugins -
 ```c
-Name: navigationbar
+Plugin Source: Cordova plugin registry
 Plugin ID: cordova-plugin-navigationbar
-[v] Plugin is located in the Apache Cordova Plugins Registry
-```
 
 ## Cocoon ##
 https://cocoon.io - Create project - [specific project] - Setting - Plugins - Custom - Git Url: https://github.com/cranberrygame/cordova-plugin-navigationbar.git - INSTALL - Save<br>
@@ -66,7 +64,7 @@ window.navigationbar.hide();
 
 # Useful links #
 
-Plugins For Cordova<br>
+Cordova Plugins<br>
 http://cranberrygame.github.io?referrer=github
 
 # Credits #
