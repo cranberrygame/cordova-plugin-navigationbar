@@ -1,0 +1,34 @@
+{
+  "name": "cordova-plugin-navigationbar",
+  "version": "1.0.31",
+  "description": "hide and auto hide navigation bar.",
+  "cordova": {
+    "id": "cordova-plugin-navigationbar",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cranberrygame/cordova-plugin-navigationbar.git"
+  },
+  "keywords": [
+    "cordova",
+    "plugin",
+    "navigationbar",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "cranberrygame",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cranberrygame/cordova-plugin-navigationbar/issues"
+  },
+  "homepage": "https://github.com/cranberrygame/cordova-plugin-navigationbar#readme"
+}
